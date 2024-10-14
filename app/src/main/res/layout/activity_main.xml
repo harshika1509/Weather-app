@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sunny_background"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/searchviewshape"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search for a city"
+            android:searchIcon="@drawable/search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginTop="8dp"  <!-- 8dp margin below the search bar -->
+            app:layout_constraintTop_toBottomOf="@+id/searchView"  <!-- Constrain the top of TextView to the bottom of the SearchView -->
+            app:layout_constraintStart_toStartOf="@+id/searchView"  <!-- Constrain start (left side) of TextView to the start of SearchView -->
+        app:layout_constraintEnd_toEndOf="@+id/searchView"  <!-- Constrain end (right side) of TextView to the end of SearchView -->
+        app:layout_constraintHorizontal_bias="0.5"  <!-- Center the TextView horizontally relative to the SearchView --> />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
